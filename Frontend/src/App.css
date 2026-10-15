@@ -181,4 +181,10 @@
     right: 0;
     border-right-color: var(--border);
   }
+  .course-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  }
 }
