@@ -16,10 +16,8 @@ def drop_table(connection: sqlite3.Connection, tableName: str):
 def print_table_info(connection: sqlite3.Connection, tableName: str):
     print(connection.execute(f"""PRAGMA table_info({tableName})""").fetchall())
 
-def mainp():
-    csv_path = "~/downloads/sdsu.csv"
-    csv = pandas.read_csv(csv_path)
-    print(csv.columns)
+def print_db(connection: sqlite3.Connection, tableName: str):
+    print(connection.execute(f"SELECT * FROM {tableName} WHERE 1 = 1").fetchall())
 
 def main():
     database_path = os.path.abspath(os.path.join('data', 'data.db'))
@@ -62,29 +60,6 @@ def main():
         INSERT INTO CoursePrereq (courseCode, prereq) 
         VALUES ("{csv.loc[i, 'course_code']}", "{csv.loc[i, 'prerequisites']}")
         """)
-
-
-
-
-    print(db.execute(r"""
-    SELECT *
-    FROM Courses
-    WHERE 1=1
-    """).fetchall())
-
-
-    print(db.execute(r"""
-    SELECT *
-    FROM CoursePrereq
-    WHERE 1=1
-    """).fetchall())
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
