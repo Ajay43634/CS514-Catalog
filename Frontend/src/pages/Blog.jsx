@@ -8,7 +8,9 @@ together in a searchable layout. Students can search for a specific class or fil
 to find the information they need more easily. My role in the project is working on the frontend, including
 the page navigation, course search, curriculum filters, and displaying class information.`,
   Gian: ``,
-  Bradley: ``,
+  Bradley: `The SDSU Catalog site is designed to optimize the speed that the SDSU Catalog information can be gathered. 
+The current SDSU Catalog site is very slow for simple queries, and even slower when looking up complex queries.
+Our site solves this by using modern technology and SQL Databases with quicker queries to make gathering information bearable.`,
   Ajay: ``,
   Mateo: ``,
 };
